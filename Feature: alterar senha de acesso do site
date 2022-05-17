@@ -1,0 +1,41 @@
+@language: pt
+
+Funcionalidade:Alterar Senha do Site 
+   
+Cenário:Acessar em Alterar Senha do Site
+    Dado o usuário está navegando em "meus cartões" na tela "meus dados"
+    E seleciona a opção "Olá,usuário"
+    E clica no botão "Alterar Senha do Site"
+    Então é exibida a tela "Alterar Senha do Site"
+
+
+Cenário:Alterar Senha do Site Válido 
+     Dado o usuário está na tela de "Alterar Senha de Acesso ao Site"
+     Quando preenche os seguintes campos com valores 
+             |digite a senha atual|nova senha|confirmar nova Senha|
+             |*****               |******    |******              |
+     E clica no botão "alterar senha"
+     Então a senha é alterada com sucesso.
+
+
+Cenário:Alterar Senha do Site com valores inválidos 
+      Dado o usuário está na tela de "Alterar de acesso Senha ao Site"
+      Quando preenche os seguintes campos com valores inválidos
+           |<digite a senha atual>|<nova senha>|<confirmar nova senha>|
+      E clica no botão "alterar senha"
+      Então o sistema retorna a "<mensagem>"
+Exemplos:
+           |digite a senha atual|nova senha|confirmar nova senha|mensagem|
+           |mileidE@2           |123       |123                 |a senhaprecisa ter no mínimo 8 carácteres a senha precisa ter pelo menos uma letra maiúscula a senha precisa ter 1 caracter especial ex:!#@*|
+           |mileidE@2           |12345678  |87654321            |as senhas precisam ser,iguais,verifique!|
+           |09091334            |123456Aa@ |123456Aa@           |a senha atual não está correta.por favor,verifique e tente novamente.|
+
+Cenário:Alterar Senha com valores não preenchidos
+        Dado o usuário está na tela "Alterar Acesso da Senha ao Site"
+        Quando não preenche os seguintes campos com valores 
+           |digite a senha atual|nova senha|confirmar nova senha|
+        E clica no botão "alterar senha"
+        Então o sitema retorna a "mensagem"
+           |preencha este campo|
+
+
