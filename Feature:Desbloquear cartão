@@ -1,0 +1,10 @@
+@language: pt
+
+Funcionalidade:Desbloquear Cartão 
+
+Cenário:Acessar em Desbloquear Cartão 
+    Dado usuário esta na tela "meus cartões"
+    Quando ele clica no botão "desbloquear cartão"
+    Então é exibida a tela "desbloquear cartão"
+
+Cenário:
