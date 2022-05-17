@@ -7,4 +7,33 @@ Cenário:Acessar em Desbloquear Cartão
     Quando ele clica no botão "desbloquear cartão"
     Então é exibida a tela "desbloquear cartão"
 
+Cenário:Desbloquear Cartao válido  
+     Dado usuário está na tela "desbloqueio de cartão"
+     Quando preenche os seguintes campos
+       |número do cartão   |MM/AA|
+       |1244 5678 9799 7888|04/24|
+     E clica no botão "próximo"
+     Então é desbloqueado o cartão.
+
+Cenário:desbloquear cartão com valores inválidos
+      Dado o usuário está na tela de "Desbloquear cartão"
+      Quando preenche os seguintes campos com valores inválidos 
+            |número do cartão|MM/AA|
+      E clica no botão "próximo"
+      Então o sistema retorna a "mensagem"
+            |cartão não encontrado|
+
+Cenário:desbloquear cartão com valores não preenchidos
+       Dado usuário está na tela de "Desbloquear cartão"
+       Quando não preenche os seguintes campos com valores 
+             |<número do cartão>|<MM/AA>|
+       E clica no botão "próximo"
+       Então o sistema retorna a "<mensagem>"
+Exemplos:
+             |número do cartão   |MM/AA|mensagem|
+             |                   |10/24|o campo "número do cartão" não pode ser vazio|
+             |1233 5677 9777 7777|     |o campo "MM/AA" não pode ser vazio           |
+
+
 Cenário:
+       
