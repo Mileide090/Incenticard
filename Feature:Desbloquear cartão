@@ -33,7 +33,7 @@ Exemplos:
              |número do cartão   |MM/AA|mensagem|
              |                   |10/24|o campo "número do cartão" não pode ser vazio|
              |1233 5677 9777 7777|     |o campo "MM/AA" não pode ser vazio           |
-
+             |                   |     |o campo "número do cartão" não pode ser vazio|
 
 Cenário:
        
