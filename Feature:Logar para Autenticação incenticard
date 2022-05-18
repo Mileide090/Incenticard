@@ -26,4 +26,14 @@ Exemplos:
           | mmmmmm2   |  ******* |
           | 1234567 66|  ***     |
 
-Cenário:
+Esquema do cenário:login com campos não preenchidos
+      Dado o usuário está na tela do "login"
+      Quando o usuário não preenche os seguintes campos "<cpf>"e"<senha>"
+      E clica no botão "entrar"
+      Então o sistema retorna a mensagem "preencha este campo"
+Exemplos:
+        |  cpf     |  senha  |
+        | 1233421  |         |
+        |          | ******* |
+        |          |         |
+
