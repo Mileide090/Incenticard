@@ -3,22 +3,22 @@
 Funcionalidade:Logar para Autenticação Incenticar
 
 Cenário:Acessar Login 
-      Dado o usuário está na navegando em Incenticard na tela "menu"
-      Quando o usuário seleciona a opção "minha conta"
+      Dado usuário está na navegando em Incenticard na tela "menu"
+      Quando usuário seleciona a opção "minha conta"
       E ele clica no botão "minha conta"
       Então é exibida a tela de "login"
 
 Cenário:Login Válido no Cartão Pessoa Física 
-      Dado o usuário está na tela de "login cartão pessoa física"
-      Quando o usuário preenche os campos
+      Dado usuário está na tela de "login cartão pessoa física"
+      Quando usuário preenche os campos
              |cpf    |senha|
              |122345 |**** |
       E clica no botão "Entrar"
       Então o login e efetuado com sucesso.
 
 Cenário:Login Inválidos no Cartão Pessoa Física 
-       Dado o usuário está na tela de "login cartão Pessoa física "
-       Quando o usuário preenche os seguintes campos com valores inválidos "<cpf>"e"<senha>"
+       Dado usuário está na tela de "login cartão Pessoa física "
+       Quando usuário preenche os seguintes campos com valores inválidos "<cpf>"e"<senha>"
        E clica no botão "entrar"
        Então o sistema retorna a seguinte mensagem informando "usuário ou Senha inválidos"
 Exemplos:
@@ -27,8 +27,8 @@ Exemplos:
           | 1234567 66|  ***     |
 
 Esquema do Cenário:Login com Campos não Preenchidos no Cartão Pessoa Física 
-      Dado o usuário está na tela do "login cartão pessoa física"
-      Quando o usuário não preenche os seguintes campos "<cpf>"e"<senha>"
+      Dado usuário está na tela do "login cartão pessoa física"
+      Quando usuário não preenche os seguintes campos "<cpf>"e"<senha>"
       E clica no botão "entrar"
       Então o sistema retorna a mensagem "preencha este campo"
 Exemplos:
@@ -38,15 +38,15 @@ Exemplos:
         |          |         |
 
 Cenário:acessar Esqueceu Senha de Login do Cartão Pessoa Física 
-      Dado o usuário está na tela do "login cartão pessoa física"
-      Quando o usuário esquece a senha pra preenche os seguintes campos
+      Dado usuário está na tela do "login cartão pessoa física"
+      Quando usuário esquece a senha pra preenche os seguintes campos
                   |cpf|senha|
       E clica no botão "esqueceu sua senha"
       Então a tela de recuperação de senha é exibida
 
 Cenário:Recuperação de Senha de Login do Cartão Pessoa Física 
-     Dado o usuário está na tela de "seleciona o tipo de cartão" 
-     Quando o usuário seleciona a opção do "cartão pessoa física"
+     Dado usuário está na tela de "seleciona o tipo de cartão" 
+     Quando usuário seleciona a opção do "cartão pessoa física"
      E ele preenche o seguinte campo 
         |  cpf   |
         |12345666|
@@ -56,31 +56,55 @@ Cenário:Recuperação de Senha de Login do Cartão Pessoa Física
 
       
 Cenário:Trocar Cartão 
-      Dado o usuário está na tela de "login cartão pessoa física"
-      Quando o usuário seleciona a opção troca de cartão "seu cartão é corporativo"
+      Dado usuário está na tela de "login cartão pessoa física"
+      Quando usuário seleciona a opção troca de cartão "seu cartão é corporativo"
       E clica no botão "clique aqui para fazer o login com seu E-mail e Senha"
       Então a tela é exibida para Logar no "cartão corporativo".
 
 
 Cenário:Login Válido do Cartão Corporativo 
-     Dado o usuário está na tela do "login cartão corporativo"
-     Quando o usuário preenche os seguinte campos com valores 
+     Dado usuário está na tela do "login cartão corporativo"
+     Quando usuário preenche os seguinte campos com valores 
             |e-mail            |senha|
             |mileide@.com.br   |**** |
      E clica no botão "entrar"
      Então o login é concluído com sucesso 
 
 Cenário:Login Inválido do Cartão Corporativo 
-      Dado o usuário está na tela "login cartão corporativo"
-      Quando o usuário preenche os seguintes campos com valores inválidos "<e-mail>" e "<senha>"
+      Dado usuário está na tela "login cartão corporativo"
+      Quando usuário preenche os seguintes campos com valores inválidos "<e-mail>" e "<senha>"
       E clica no botão "entrar"
       Então o sistema retorna a "<mensagem>"
 Exemplos:
-              |   e-mail          |  senha  | mensagem |
+              |   e-mail          |  senha  | mensagem                                                         |
               | mi.com            | ******  |inclua um "@" no endereço de e-mail "mi.com" está com "@" faltando|
-              |mileide@outlook.com| ******  |usúario ou senha inválidos|
+              |mileide@outlook.com| ******  |usúario ou senha inválidos                                        |
+              |mileide@com.       | ******  |"." Está sendo usada de forma incorreta em "com."                 |
+              | @                 | ******  |Insira uma parte seguida por "@"."@". Está Incompleto             |
+              |mileide@.com       | ******  |"." Está sendo usado em uma posição incorreta em ".com"|
 
 
+Esquema do cenário:login com Campos não preenchidos em cartão corporativo
+      Dado o usuário está na tela do "login cartão corporativo "
+      Quando o usuário não preenche os seguintes campos "<e-mail >"e"<senha>"
+      E clica no botão "entrar"
+      Então o sistema retorna a mensagem "preencha este campo"
+Exemplos:
+        | e-mail             |  senha  |
+        | mileide@gmail.com  |         |
+        |                    | ******* |
+        |                    |         |
+
+cenário:Recuperação de Senha de Login do Cartão Corporativo 
+     Dado usuário está na tela de "seleciona o tipo de cartão" 
+     Quando usuário seleciona a opção do "cartão corporativo"
+     E ele preenche o seguinte campo 
+        |    e-mail       |
+        |mileide@gmail.com|
+     E clica no botão "continuar"
+     Então o sistema retorna a mensagem informando "enviamos seu link de redefinição de senha por e-mail"
+     Então o fluxo é encerrado 
+      
 
 
 
