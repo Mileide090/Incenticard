@@ -21,5 +21,9 @@ Cenário:Login inválidos
        Quando o usuário preenche os seguintes campos com valores inválidos "<cpf>"e"<senha>"
        E clica no botão "entrar"
        Então o sistema retorna a seguinte mensagem informando "usuário ou Senha inválidos"
+Exemplos:
+          |   cpf     |   senha  |
+          | mmmmmm2   |  ******* |
+          | 1234567 66|  *       |
 
-         
+Cenário:
