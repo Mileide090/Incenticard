@@ -24,6 +24,6 @@ Cenário:Login inválidos
 Exemplos:
           |   cpf     |   senha  |
           | mmmmmm2   |  ******* |
-          | 1234567 66|  *       |
+          | 1234567 66|  ***     |
 
 Cenário:
