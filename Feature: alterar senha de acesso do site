@@ -4,24 +4,24 @@ Funcionalidade:Alterar Senha do Site
    
 Cenário:Acessar em Alterar Senha do Site
     Dado o usuário está navegando em "meus cartões" na tela "meus dados"
-    E seleciona a opção "Olá,usuário"
+    Quando o usuário seleciona a opção "Olá,Paula"
     E clica no botão "Alterar Senha do Site"
     Então é exibida a tela "Alterar Senha do Site"
 
 
 Cenário:Alterar Senha do Site Válido 
      Dado o usuário está na tela de "Alterar Senha de Acesso ao Site"
-     Quando preenche os seguintes campos com valores 
+     Quando o usuário preenche os seguintes campos com valores 
              |digite a senha atual|nova senha|confirmar nova Senha|
              |*****               |******    |******              |
      E clica no botão "alterar senha"
      Então a senha é alterada com sucesso.
+     E o sistema reinicia para o login com a nova senha.
 
 
 Cenário:Alterar Senha do Site com valores inválidos 
       Dado o usuário está na tela de "Alterar de acesso Senha ao Site"
-      Quando preenche os seguintes campos com valores inválidos
-           |<digite a senha atual>|<nova senha>|<confirmar nova senha>|
+      Quando o usuário preenche os campos com valores inválidos "<digite a senha atual>", "<nova senha>"e "<confirmar nova senha>"
       E clica no botão "alterar senha"
       Então o sistema retorna a "<mensagem>"
 Exemplos:
@@ -32,10 +32,13 @@ Exemplos:
 
 Cenário:Alterar Senha com valores não preenchidos
         Dado o usuário está na tela "Alterar Acesso da Senha ao Site"
-        Quando não preenche os seguintes campos com valores 
-           |digite a senha atual|nova senha|confirmar nova senha|
+        Quando o usuário não preenche os seguintes campos com valores "<digite a senha atual>", "<nova senha>"e "<confirmar nova senha>"
         E clica no botão "alterar senha"
-        Então o sitema retorna a "mensagem"
-           |preencha este campo|
+        Então o sitema retorna a mensagem informando "preencha este campo"
+Exemplos:
+         |digite a senha atual|nova senha|confirmar nova senha|
+         |*******             |          |                    |
+         |                    |*****     |                    |
+         |                    |          |******              |
 
 
