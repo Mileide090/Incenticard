@@ -1,0 +1,25 @@
+@language: pt
+
+Funcionalidade:Logar para Autenticação Incenticar
+
+Cenário:Acessar login 
+      Dado o usuário está na navegando em Incenticard na tela "menu"
+      Quando o usuário seleciona a opção "minha conta"
+      E ele clica no botão "minha conta"
+      Então é exibida a tela de "login"
+
+Cenário:login válido 
+      Dado o usuário está na tela de "login"
+      Quando o usuário preenche os campos
+             |cpf    |senha|
+             |122345 |**** |
+      E clica no botão "Entrar"
+      Então o login e efetuado com sucesso.
+
+Cenário:Login inválidos 
+       Dado o usuário está na tela de "login"
+       Quando o usuário preenche os seguintes campos com valores inválidos "<cpf>"e"<senha>"
+       E clica no botão "entrar"
+       Então o sistema retorna a seguinte mensagem informando "usuário ou Senha inválidos"
+
+         
