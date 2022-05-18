@@ -37,3 +37,24 @@ Exemplos:
         |          | ******* |
         |          |         |
 
+Cenário:acessar Esqueceu Senha do login 
+      Dado o usuário está na tela do "login"
+      Quando o usuário esquece a senha pra preenche os seguintes campos
+                  |cpf|senha|
+      E clica no botão "esqueceu sua senha"
+      Então a tela de recuperação de senha é exibida
+
+Cenário:Recuperação de Senha do login
+     Dado o usuário está na tela de"seleciona o tipo de cartão" 
+     Quando o usuário seleciona a opção do cartão "cartão pessoa física"
+     E ele preenche o seguinte campo 
+        |  cpf   |
+        |12345666|
+     E clica no botão "continuar"
+     Então o sistema retorna a mensagem informando "enviamos seu link de redefinição de senha por e-mail"
+     Então o fluxo é encerrado 
+
+
+      
+
+
