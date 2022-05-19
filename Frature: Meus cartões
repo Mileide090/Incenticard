@@ -3,4 +3,7 @@
 Funcionalidade:Meus cartões 
 
 Cenário:Acessar Meus Cartões 
-       
+      Dado usuário está na tela "login"
+      Quando usuário preenche os campos 
+      E clica no botão "entrar"
+      Então é exibida a tela "meus cartões"
