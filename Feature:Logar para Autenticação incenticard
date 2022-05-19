@@ -105,8 +105,11 @@ cenário:Recuperação de Senha de Login do Cartão Corporativo
      Então o sistema retorna a mensagem informando "enviamos seu link de redefinição de senha por e-mail"
      Então o fluxo é encerrado 
 
-cenário:desconectar da página 
-       Dado usuário está na tela  
+cenário:desconectar da página
+    Dado o usuário está logado e navegando em "meus cartões" na tela "meus dados"
+    Quando o usuário seleciona a opção "sair"
+    E clica no botão "sair "
+    Então o sistema fecha voltando para a tela inicial do login.
 
 
 
