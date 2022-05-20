@@ -4,5 +4,13 @@
 Funcionalidade:Meus Dados
 
 Cenário:Acessar meus dados
-      Dado usuário está navegando "meus cartões" na tela
+    Dado o usuário está navegando em "meus cartões" na tela "menu"
+    Quando o usuário seleciona a opção "Olá,Paula"
+    E clica no botão "Meus Dados"
+    Então é exibida a tela "Meus Dados"
+
+
+Cenário:layout da página Meus dados 
+
+
    
