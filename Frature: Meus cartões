@@ -41,6 +41,15 @@ Cenário:visualizar extratado cartão físico
 
 
 
-Cenário:recuperar senha do cartão físico 
+Cenário:recuperar senha do cartão físico por e-mail 
        Dado usuário está na tela "cartão físico"
+       Quando usuário clica no botão "recuperar senha"
+       E seleciona a opção "e-mail"
+       Então o sistema retorna a mensagem "solicitação efetuada com sucesso,verifique seu e-mail "
    
+
+Cenário: Cenário:recuperar senha do cartão físico celular 
+       Dado usuário está na tela "cartão físico"
+       Quando usuário clica no botão "recuperar senha"
+       E seleciona a opção "celular"
+       Então o sistema retorna a mensagem "solicitação efetuada com sucesso,verifique seu celular"
