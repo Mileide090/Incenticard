@@ -23,9 +23,7 @@ Cenário:Ver cartões vencidos
 
 
 Cenário:verificar estado dos cartões (Mileide com dúvidas neste cenário)
-      Dado usuário está navegando na tela "ver cartões vencidos"
-      Quando usuário não encontra nenhum vencimento de cartão 
-      Então é encerrada a ação de verificar o estado do cartão
+      Dizer Sobre a bandeira do cartão e tem que por esquema de cenário 
       
 
 Cenário:verificar cartões físicos 
