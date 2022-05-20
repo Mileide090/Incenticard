@@ -4,16 +4,15 @@ Funcionalidade:Meus cartões
 
 Cenário:Acessar Meus Cartões 
       Dado usuário está na tela "login"
-      Quando usuário preenche os campos 
+      Quando usuário preencheu os campos para Logar 
       E clica no botão "entrar"
       Então é exibida a tela "meus cartões"
 
 
 Cenário:Layout de meus cartões  (ponto a conversa com Rafa)
      Dado usuário está navegando na tela "meus cartões"
-     Quando usuário visualiza o layout do sistema
-     E não encontra nenhuma apresentação de problemas técnicos do sistema
-     Então a operação layout é encerrada
+     Quando usuário visualiza o layout 
+     Então o layout está alinhado corretamente 
 
 
 Cenário:Ver cartões vencidos 
@@ -32,7 +31,6 @@ Cenário:verificar estado dos cartões (Mileide com dúvidas neste cenário)
 Cenário:verificar cartões físicos 
        Dado usuário está na tela "meus cartões"
        Quando seleciona a opção "cartões físico"
-       E clica no botão "cartões físico"
        Então é exibida a tela "cartões físico"
 
 
