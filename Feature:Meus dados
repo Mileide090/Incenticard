@@ -11,6 +11,14 @@ Cenário:Acessar meus dados
 
 
 Cenário:layout da página Meus dados 
+     Dado usuário está navegando na tela "Meus Dados"
+     Quando usuário visualiza o layout do sistema
+     E não encontra nenhuma apresentação de problemas técnicos do sistema
+     Então a operação layout é encerrada
 
+Cenário:Atualizar Meus Dados
+      Dado usuário está na tela "Meus Dados"
+      Quando usuário troca os valores preenchidos 
+            
 
    
