@@ -32,8 +32,8 @@ Cenário:verificar estado dos cartões (Mileide com dúvidas neste cenário)
 Cenário:verificar cartões físicos 
        Dado usuário está na tela "meus cartões"
        Quando seleciona a opção "cartões físico"
-       E clica no botão "cartão físico"
-       Então é exibida a tela "cartão físico"
+       E clica no botão "cartões físico"
+       Então é exibida a tela "cartões físico"
 
 
 Cenário:visualizar extratado cartão físico 
@@ -53,3 +53,29 @@ Cenário: Cenário:recuperar senha do cartão físico celular
        Quando usuário clica no botão "recuperar senha"
        E seleciona a opção "celular"
        Então o sistema retorna a mensagem "solicitação efetuada com sucesso,verifique seu celular"
+
+
+Cenário:envio de senha ( não entendi este cenário)
+
+
+Cenário:visualizar cartões virtual 
+       Dado usuário está na tela "meus cartões"
+       Quando seleciona a opção "cartões virtuais"
+       E clica no botão "cartões virtuais"
+       Então é exibida a tela "cartões virtuais"
+
+
+Cenário:visualizar extrato do cartão virtual
+  (Não consigo acessar no sistema)
+
+
+Cenário:recuperar senha do cartão virtual (sem acesso ao cartão virtual)
+
+
+
+Cenário:envio de senha do cartão virtual (mesmo problema acima)
+
+
+
+Cenário:visualizar dados do cartão virtual (sem acesso ao sistema)
+
