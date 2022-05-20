@@ -18,7 +18,15 @@ Cenário:layout da página Meus dados
 
 Cenário:Atualizar Meus Dados
       Dado usuário está na tela "Meus Dados"
-      Quando usuário troca os valores preenchidos 
+      Quando usuário troca os valores já preenchidos nos campos
+      E clica no botão "atualizar meus dados"
+      Então os dados são Atualizados
+
+Cenário:Atualizar Meus dados com valores inválidos (não consigo acessar esse campo)
+      Dado usuário está na tela "meus dados"
+      Quando usuário preenche os seguintes campos com valores inválidos 
+      
+         
             
 
    
