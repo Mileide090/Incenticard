@@ -3,7 +3,7 @@
 Funcionalidade:Alterar Senha do Site 
    
 Cenário:Acessar em Alterar Senha do Site
-    Dado o usuário está navegando em "meus cartões" na tela "meus dados"
+    Dado o usuário está navegando em "meus cartões" na tela "menu"
     Quando o usuário seleciona a opção "Olá,Paula"
     E clica no botão "Alterar Senha do Site"
     Então é exibida a tela "Alterar Senha do Site"
