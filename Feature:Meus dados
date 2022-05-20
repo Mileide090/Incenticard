@@ -13,8 +13,8 @@ Cenário:Acessar meus dados
 Cenário:layout da página Meus dados 
      Dado usuário está navegando na tela "Meus Dados"
      Quando usuário visualiza o layout do sistema
-     E não encontra nenhuma apresentação de problemas técnicos do sistema
-     Então a operação layout é encerrada
+     Então o layout está alinhado corretamente 
+
 
 Cenário:Atualizar Meus Dados
       Dado usuário está na tela "Meus Dados"
@@ -22,11 +22,21 @@ Cenário:Atualizar Meus Dados
       E clica no botão "atualizar meus dados"
       Então os dados são Atualizados
 
+
 Cenário:Atualizar Meus dados com valores inválidos (não consigo acessar esse campo)
       Dado usuário está na tela "meus dados"
       Quando usuário preenche os seguintes campos com valores inválidos 
+
+
+Cenário:Atualizar meus dados com Campos não preenchidos(não consigo acessar esse campo)
+
+
+Cenário:Atualizar Meus dados -validar cep (preciso de explicação)
+
+
+Cenário:Atualizar Meus dados validar filtro de buscas de estado e cidade
       
          
-            
+    
 
    
