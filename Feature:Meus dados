@@ -1,0 +1,8 @@
+@language: pt
+
+
+Funcionalidade:Meus Dados
+
+Cenário:Acessar meus dados
+      Dado usuário está navegando "meus cartões" na tela
+   
