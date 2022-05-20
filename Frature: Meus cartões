@@ -10,26 +10,37 @@ Cenário:Acessar Meus Cartões
 
 
 Cenário:Layout de meus cartões  (ponto a conversa com Rafa)
-      Dado usuário está na tela do "meus cartões"
-      Quando usuário navega na tela "meus cartões"
-      E ele visualiza o sistema no campo do "meus cartões"
-      Então o usuário não encontra nenhum problema apresentado no "layout"
+     Dado usuário está navegando na tela "meus cartões"
+     Quando usuário visualiza o layout do sistema
+     E não encontra nenhuma apresentação de problemas técnicos do sistema
+     Então a operação layout é encerrada
 
 
 Cenário:Ver cartões vencidos 
-       Dado usuário está na tela do "meus cartões"
-       Quando usuário seleciona a opção "ver cartões vencidos"
-       E clica no botão "meus cartões vencidos"
+       Dado usuário está na tela "meus cartões"
+       Quando usuário seleciona "ver cartões vencidos"
+       E clica no botão "ver cartões vencidos"
        Então é exibida a tela de "ver cartões vencidos"
 
 
-Cenário:verificar estado dos cartões 
-      Dado usuário está na tela do "ver cartões vencidos"
-      Quando o usuário navega na tela "ver cartões vencidos"
-      E ele não encontra nenhum vencimento de cartões.
-      Então a ação de verificar estado dos cartões se encerra 
-      E o fluxo é encerrado.
+Cenário:verificar estado dos cartões (Mileide com dúvidas neste cenário)
+      Dado usuário está navegando na tela "ver cartões vencidos"
+      Quando usuário não encontra nenhum vencimento de cartão 
+      Então é encerrada a ação de verificar o estado do cartão
+      
 
 Cenário:verificar cartões físicos 
-       Dado usuário está na tela do "meus cartões"
+       Dado usuário está na tela "meus cartões"
        Quando seleciona a opção "cartões físico"
+       E clica no botão "cartão físico"
+       Então é exibida a tela "cartão físico"
+
+
+Cenário:visualizar extratado cartão físico 
+(Problemas ao acessar no sistema)
+
+
+
+Cenário:recuperar senha do cartão físico 
+       Dado usuário está na tela "cartão físico"
+   
