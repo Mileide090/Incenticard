@@ -28,15 +28,26 @@ Cenário:Atualizar Meus dados com valores inválidos (não consigo acessar esse 
       Quando o usuário preenche os seguintes campos com valores inválidos 
            |e-mail           |celular     |cep     |
            |mileide@gmail.com|(14)88888888|18666777|
+      E clica no botão "Atualizar Meus dados"
       Então o sistema retorna a "<mensagem>"
 Exemplos:
            |e-mail           |celular     |cep     |mensagem                                                                                                               |
            |iiiiiiiiii       |(18)88877777|18666666|dados atualizados com sucesso!                                                                                         |
            |mileide@gamil.com|(22)22222222|18666666|o celular informado já está cadastrado na base de dados(01). Favor,entrar em contato com a nossa central de atendimento|
            |mileide@gmail.com|(18)88877777|33333333|Cep não encontrado                                                                                                     |
-           
+             
 
-Cenário:Atualizar meus dados com Campos não preenchidos(não consigo acessar esse campo)
+Cenário:Atualizar meus dados com Campos não preenchidos
+      Dados o usuário está na tela "meus dados"
+      Quando o usuário não preenche os seguintes campos com valores "<e-mail>","<celular>"e "<cep>"
+      E clica no botão "Atualizar Meus dados"
+      Então o sistema retorna a mensagem informando "preenche este campo"
+Exemplos:
+         |e-mail            |celular      |cep       |
+         |                  |(18)88877777 |18666666  |
+         |mileide@gamail.com|             |18666666  |
+         |mileide@gmail.com |(18)88877777 |          |
+         |                  |             |          |
 
 
 Cenário:Atualizar Meus dados -validar cep (preciso de explicação)
