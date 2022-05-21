@@ -26,7 +26,14 @@ Cenário:Atualizar Meus Dados
 Cenário:Atualizar Meus dados com valores inválidos (não consigo acessar esse campo)
       Dado o usuário está na tela "meus dados"
       Quando o usuário preenche os seguintes campos com valores inválidos 
-
+           |e-mail           |celular     |cep     |
+           |mileide@gmail.com|(14)88888888|18666777|
+      Então o sistema retorna a "<mensagem>"
+Exemplos:
+           |e-mail           |celular     |cep     |mensagem                                                                                                               |
+           |iiiiiiiiii       |(18)88888888|18666666|dados atualizados com sucesso!                                                                                         |
+           |mileide@gamil.com|(22)22222222|18666666|o celular informado já está cadastrado na base de dados(01). Favor,entrar em contato com a nossa central de atendimento|
+           |mileide@gmail.com|(18)88888888
 
 Cenário:Atualizar meus dados com Campos não preenchidos(não consigo acessar esse campo)
 
