@@ -23,13 +23,13 @@ Cenário:Ver cartões vencidos
 
 
 Cenário:verificar estado dos cartões (Mileide com dúvidas neste cenário)
-      Dizer Sobre a bandeira do cartão e tem que por esquema de cenário 
+      
       
 
 Cenário:verificar cartões físicos 
        Dado usuário está na tela "meus cartões"
        Quando seleciona a opção "cartões físico"
-       Então é exibida a tela "cartões físico"
+       Então é exibido na tela os "cartões físico"
 
 
 Cenário:visualizar extratado cartão físico 
@@ -47,7 +47,7 @@ Cenário:recuperar senha do cartão físico por e-mail
    
 
 Cenário: Cenário:recuperar senha do cartão físico celular 
-       Dado usuário está na tela "cartão físico"
+       Dado usuário está na tela "meus cartões"
        Quando usuário clica no botão "recuperar senha"
        E seleciona a opção "celular"
               |e-mail|celular|
@@ -55,7 +55,11 @@ Cenário: Cenário:recuperar senha do cartão físico celular
        Então o sistema retorna a mensagem "solicitação efetuada com sucesso,verifique seu celular"
 
 
-Cenário:envio de senha ( não entendi este cenário)
+Cenário:envio de senha 
+      Dado usuário está na tela "meus catões"
+      Quando usuário clica no botão "recuperar senha"
+      E seleciona a opção "celular"
+      Então o usuário recebe em seu celular uma mensagem do "envio de senha"
 
 
 Cenário:visualizar cartões virtual 
