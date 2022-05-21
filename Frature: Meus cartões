@@ -3,33 +3,40 @@
 Funcionalidade:Meus cartões 
 
 Cenário:Acessar Meus Cartões 
-      Dado usuário está na tela "login"
-      Quando usuário preencheu os campos para Logar 
+      Dado o usuário está na tela "login"
+      Quando o usuário preencheu os campos para Logar 
       E clica no botão "entrar"
       Então é exibida a tela "meus cartões"
 
 
 Cenário:Layout de meus cartões  (ponto a conversa com Rafa)
-     Dado usuário está navegando na tela "meus cartões"
-     Quando usuário visualiza o layout 
+     Dado o usuário está navegando na tela "meus cartões"
+     Quando o usuário visualiza o ilayout 
      Então o layout está alinhado corretamente 
 
 
 Cenário:Ver cartões vencidos 
-       Dado usuário está na tela "meus cartões"
-       Quando usuário seleciona "ver cartões vencidos"
+       Dado o usuário está na tela "meus cartões"
+       Quando o usuário seleciona "ver cartões vencidos"
        E clica no botão "ver cartões vencidos"
        Então é exibida a tela de "ver cartões vencidos"
 
 
 Cenário:verificar estado dos cartões (Mileide com dúvidas neste cenário)
-      
-      
+      Dado o usuário está na tela "meus cartões"
+      Quando o usuário deseja visualizar o estado dos "<cartões>"
+      Então o sistema exibe a legenda com as "<cores>" indicado cada estado do cartão 
+Exemplos:
+        |Cartões                       |cores    |
+        |cartões  bloqueados           |Cinza    |
+        |cartões próximos do vencimento|amarelo  |
+        |cartões vencidos              |vermelho |
+
 
 Cenário:verificar cartões físicos 
-       Dado usuário está na tela "meus cartões"
-       Quando seleciona a opção "cartões físico"
-       Então é exibido na tela os "cartões físico"
+       Dado o usuário está na tela "meus cartões"
+       Quando o usuário seleciona a opção "cartões físico"
+       Então é exibido na tela "cartões físico"
 
 
 Cenário:visualizar extratado cartão físico 
@@ -38,8 +45,8 @@ Cenário:visualizar extratado cartão físico
 
 
 Cenário:recuperar senha do cartão físico por e-mail 
-       Dado usuário está na tela "cartão físico"
-       Quando usuário clica no botão "recuperar senha"
+       Dado o usuário está na tela "cartão físico"
+       Quando o usuário clica no botão "recuperar senha"
        E seleciona a opção "e-mail"
              |e-mail|celular|
              |  X   |       |
@@ -47,8 +54,8 @@ Cenário:recuperar senha do cartão físico por e-mail
    
 
 Cenário: Cenário:recuperar senha do cartão físico celular 
-       Dado usuário está na tela "meus cartões"
-       Quando usuário clica no botão "recuperar senha"
+       Dado o usuário está na tela "meus cartões"
+       Quando o usuário clica no botão "recuperar senha"
        E seleciona a opção "celular"
               |e-mail|celular|
               |      |   X   |
@@ -56,15 +63,15 @@ Cenário: Cenário:recuperar senha do cartão físico celular
 
 
 Cenário:envio de senha 
-      Dado usuário está na tela "meus catões"
-      Quando usuário clica no botão "recuperar senha"
+      Dado o usuário está na tela "meus catões"
+      Quando o usuário clica no botão "recuperar senha"
       E seleciona a opção "celular"
       Então o usuário recebe em seu celular uma mensagem do "envio de senha"
 
 
 Cenário:visualizar cartões virtual 
-       Dado usuário está na tela "meus cartões"
-       Quando seleciona a opção "cartões virtuais"
+       Dado o usuário está na tela "meus cartões"
+       Quando o seleciona a opção "cartões virtuais"
        E clica no botão "cartões virtuais"
        Então é exibida a tela "cartões virtuais"
 
