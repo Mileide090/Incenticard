@@ -62,12 +62,11 @@ Cenário: Cenário:recuperar senha do cartão físico por celular
        Então o sistema retorna a mensagem "solicitação efetuada com sucesso,verifique seu celular"
 
 
-Cenário:envio de senha ( Rafah não consegui receber a mensagem)
+Cenário:envio de senha 
       Dado o usuário está na tela "cartões físicos"
       Quando o usuário clica no botão "recuperar senha"
       E seleciona a opção "celular"
-      Então o usuário recebe em seu celular uma mensagem do "envio de senha"
-
+      Então o usuário recebe em seu celular a mensagem "Esqueceu a senha?Acontece!Pode voltar a curtir o seu cartao,CARTAO:2724,a senha é 4700"
 
 Cenário:visualizar cartões virtual 
        Dado o usuário está na tela "meus cartões"
@@ -101,7 +100,7 @@ Cenário:envio de senha do cartão virtual
     Dado o usuário está na tela "cartões virtuais"
     Quando o usuário clica no botão "recuperar senha"
     E seleciona a opção "celular"
-    Então o usuário recebe em seu celular uma mensagem do "envio de senha"
+    Então o usuário recebe em seu celular a mensagem "Esqueceu a senha?Acontece!Pode voltar a curtir o seu cartao,CARTAO:2724,a senha e 4700"
 
 
 Cenário:visualizar dados do cartão virtual 
