@@ -50,12 +50,25 @@ Exemplos:
          |                  |             |          |
 
 
-Cenário:Atualizar Meus dados -validar cep (preciso de explicação)
+Cenário:Atualizar Meus dados -validar cep 
+      Dado o usuário está na tela de "meus dados"
+      Quando o usuário preenche o campo "<cep>" 
+      Então o sistema faz a "busca do endereço"
+      Quando o sistema válida o "cep" 
+      Então na operação é encontrado o "<estado>","<cidade>","<bairro>"e "<endereço>"
+Exemplos:
+       |cep       |estado   |cidade          |bairro           |endereço                           |
+       |02860001  |SP       |São Paulo       |Vila Souza       |Avenida deputado cantídio Sampaio  |
+       |78896013  |MT       |Sorriso         |Centro-Sul       |Rua Mato Grosso                    |
+       |22050002  |RJ       |Rio de Janeiro  |Copacabana       |Avenida Nossa Senhora de Copacabana|
+       |89211300  |SC       |Joinville       |Floresta         |Tua Santa Catarina                 |
+       |36512000  |MG       |Tocantins       |Não encontrado   |Não encontrado                     |
+
 
 
 Cenário:Atualizar Meus dados validar filtro de buscas de estado e cidade
-      
-         
+
+       |36512000  |MG       |Tocantins       |Não encontrado   |Não encontrado                     | 
     
 
    
