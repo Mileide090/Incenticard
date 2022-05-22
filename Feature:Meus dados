@@ -67,7 +67,17 @@ Exemplos:
 
 
 Cenário:Atualizar Meus dados validar filtro de buscas de estado e cidade
+       Dado o usuário está na tela de "meus dados"
+       Quando o usuário preenche o campo "<cep>"
+       E o usuário válida os dados se estão corretos nos campos "<estado>" e "<cidade>"
+       Então a operação do filtro no sistema é concluído 
 
-    
+Exemplos:
+       |cep       |estado   |cidade        |
+       |02860001  |SP       |São Paulo     |    
+       |78896013  |MT       |Sorriso       |                
+       |22050002  |RJ       |Rio de Janeiro|
+       |89211300  |SC       |Joinville     |
+       |36512000  |MG       |Tocantins     |  
 
    
