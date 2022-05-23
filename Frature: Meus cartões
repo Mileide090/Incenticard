@@ -40,7 +40,9 @@ Cenário:verificar cartões físicos
 
 
 Cenário:visualizar extratado cartão físico 
-(Problemas ao acessar no sistema)
+      Dado o usuário está na tela "meus cartões"
+      Quando o usuário clica no botão "extrato"
+      Então é exibida a tela do "extrato"
 
 
 
@@ -76,7 +78,9 @@ Cenário:visualizar cartões virtual
 
 
 Cenário:visualizar extrato do cartão virtual
- 
+      Dado usuário está na tela "meus cartões"
+      Quando o usuário clica no botão "extrato"
+      Então é exibida a tela do "extrato"
 
 
 Cenário:recuperar senha do cartão virtual 
