@@ -40,7 +40,7 @@ Cenário:verificar cartões físicos
 
 
 Cenário:visualizar extratado cartão físico 
-      Dado o usuário está na tela "meus cartões"
+      Dado o usuário está na tela "cartões físicos"
       Quando o usuário clica no botão "extrato"
       Então é exibida a tela do "extrato"
 
@@ -78,7 +78,7 @@ Cenário:visualizar cartões virtual
 
 
 Cenário:visualizar extrato do cartão virtual
-      Dado usuário está na tela "meus cartões"
+      Dado usuário está na tela "cartões virtuais"
       Quando o usuário clica no botão "extrato"
       Então é exibida a tela do "extrato"
 
@@ -108,4 +108,4 @@ Cenário:envio de senha do cartão virtual
 
 
 Cenário:visualizar dados do cartão virtual 
-
+ 
