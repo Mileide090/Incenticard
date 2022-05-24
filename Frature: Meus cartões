@@ -49,7 +49,7 @@ Corrigido:Meus cartões-verificar estado dos cartões
       Então o sistema exibe a legenda com as "<cores>" indicado a situação que se encontra o cartão 
 Exemplos:
         |Cartões                       |cores    |
-        |cartões ativos                |brnaco   |
+        |cartões ativos                |branco   |
         |cartões  bloqueados           |Cinza    |
         |cartões próximos do vencimento|amarelo  |
         |cartões vencidos              |vermelho |
