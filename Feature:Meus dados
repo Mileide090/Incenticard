@@ -30,20 +30,6 @@ Cenário:Atualizar Meus Dados
       E clica no botão "atualizar meus dados"
       Então os dados são Atualizados
 
-
-Cenário:Atualizar Meus dados com valores inválidos (não consigo acessar esse campo)
-      Dado o usuário está na tela "meus dados"
-      Quando o usuário preenche os seguintes campos com valores inválidos 
-           |e-mail           |celular     |cep     |
-           |mileide@gmail.com|(14)88888888|18666777|
-      E clica no botão "Atualizar Meus dados"
-      Então o sistema retorna a "<mensagem>"
-Exemplos:
-           |e-mail           |celular     |cep     |mensagem                                                                                                               |
-           |iiiiiiiiii       |(18)88877777|18666666|dados atualizados com sucesso!                                                                                         |
-           |mileide@gamil.com|(22)22222222|18666666|o celular informado já está cadastrado na base de dados(01). Favor,entrar em contato com a nossa central de atendimento|
-           |mileide@gmail.com|(18)88877777|33333333|Cep não encontrado                                                                                                     |
- 
 Corrigido:Atualizar Meus Dados
       Dado usuário está na tela "Meus Dados"
       Quando o usuário atualiza um dos valores nos seguintes campos
@@ -62,7 +48,35 @@ Corrigido:Atualizar Meus Dados
      Então o sistema atualiza os " Meus Dados"
      E exibe uma mensagem informando "dados atualizados com sucesso"
 
-Cenário:Atualizar meus dados com Campos não preenchidos
+Cenário:Atualizar Meus dados com valores inválidos 
+      Dado o usuário está na tela "meus dados"
+      Quando o usuário preenche os seguintes campos com valores inválidos 
+           |e-mail           |celular     |cep     |
+           |mileide@gmail.com|(14)88888888|18666777|
+      E clica no botão "Atualizar Meus dados"
+      Então o sistema retorna a "<mensagem>"
+Exemplos:
+           |e-mail           |celular     |cep     |mensagem                                                                                                               |
+           |iiiiiiiiii       |(18)88877777|18666666|dados atualizados com sucesso!                                                                                         |
+           |mileide@gamil.com|(22)22222222|18666666|o celular informado já está cadastrado na base de dados(01). Favor,entrar em contato com a nossa central de atendimento|
+           |mileide@gmail.com|(18)88877777|33333333|Cep não encontrado                                                                                                     |
+(Corrigindo)Esquema do cenário:Atualizar Meus Dados com valores inválidos 
+      Dado o usuário está na tela "meus dados"
+      Quando o usuário preenche os campos com valores inválidos "<e-mail>","<celular>"E"<cep>"
+      E clica no botão "atualizar meus dados"
+      Então o sistema retorna a "<mensagem>"
+Exemplos:
+          |e-mail           |celular      |cep       |mensagem                                                                                                               |
+          |iiiiiiiiii       |(18)88877777 |18.666-666|dados atualizados com sucesso!                                                                                         |
+          |mileide@gamil.com|(22)22222222 |18.666-666|o celular informado já está cadastrado na base de dados(01). Favor,entrar em contato com a nossa central de atendimento|
+          |mileide@gmail.com|(18)88877777 |33.333-333|Cep não encontrado                                                                                                     |
+          |@                |(12)695555665|18.680-640|Dados atualizados com sucesso                                                                                          |
+          |Al@@             |(12)695555665|18.680-640|Dados atualizados com sucesso                                                                                          |
+          |@12              |(12)695555665|18.680-640|Dados atualizados com sucesso                                                                                          |
+          |teste@gmail.com  |(12)         |18.680-640|Dados atualizados com sucesso                                                                                          |
+
+
+cenário:Atualizar meus dados com Campos não preenchidos
       Dados o usuário está na tela "meus dados"
       Quando o usuário não preenche os seguintes campos com valores "<e-mail>","<celular>"e "<cep>"
       E clica no botão "Atualizar Meus dados"
@@ -89,6 +103,18 @@ Exemplos:
        |89211300  |SC       |Joinville       |Floresta         |Tua Santa Catarina                 |
        |36512000  |MG       |Tocantins       |Não encontrado   |Não encontrado                     |
 
+Corrigido:Esquema do cenário:Atualizar Meus Dados -validar cep
+      Dado o usuário está na tela de "meus dados"
+      Quando o usuário preenche o campo "<cep>" com valores 
+      Então o sistema "incenticard" o complemento do endereço preenchido
+      É válida o cep,complementando o endereço nos campos "<estado>","<cidade>","<bairro>","<endereço>"
+Exemplos:
+       |cep       |estado   |cidade          |bairro           |endereço                           |
+       |02860001  |SP       |São Paulo       |Vila Souza       |Avenida deputado cantídio Sampaio  |
+       |78896013  |MT       |Sorriso         |Centro-Sul       |Rua Mato Grosso                    |
+       |22050002  |RJ       |Rio de Janeiro  |Copacabana       |Avenida Nossa Senhora de Copacabana|
+       |89211300  |SC       |Joinville       |Floresta         |Tua Santa Catarina                 |
+       |36512000  |MG       |Tocantins       |Não encontrado   |Não encontrado                     |
 
 
 Cenário:Atualizar Meus dados validar filtro de buscas de estado e cidade
@@ -96,6 +122,14 @@ Cenário:Atualizar Meus dados validar filtro de buscas de estado e cidade
        Quando o usuário preenche o campo "<cep>"
        E o usuário válida os dados se estão corretos nos campos "<estado>" e "<cidade>"
        Então a operação do filtro no sistema é concluído 
+
+
+Corrigido:Atualizar Meus Dados validar filtro de buscas de estado e cidade
+        Dado o usuário preenche o campo "<cep>" com valores
+        E o sistema renderiza complementando o endereço nos campos "<estado>","<cidade>","<bairro>"e"<endereço>"
+        Quando o usuário verifica se os dados que foram complementados estão corretos
+        Então o filtro do sistema é válida 
+        
 
 Exemplos:
        |cep       |estado   |cidade        |
