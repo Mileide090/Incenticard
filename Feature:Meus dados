@@ -9,6 +9,14 @@ Cenário:Acessar meus dados
     E clica no botão "Meus Dados"
     Então é exibida a tela "Meus Dados"
 
+Correção:Acessar meus dados
+      Dado usuário estar logado,navegando pelo site "incenticard"
+      Quando o usuário aciona o botão com nome do usuário que está navegando "Olá,Alexandre" 
+      E clicada opção "Meus Dados"
+      Então no sistema exibe a tela "Meus Dados"
+      Então o usuário pode atualizar os dados 
+
+
 
 Cenário:layout da página Meus dados 
      Dado o usuário está na tela de "Meus Dados"
@@ -35,7 +43,24 @@ Exemplos:
            |iiiiiiiiii       |(18)88877777|18666666|dados atualizados com sucesso!                                                                                         |
            |mileide@gamil.com|(22)22222222|18666666|o celular informado já está cadastrado na base de dados(01). Favor,entrar em contato com a nossa central de atendimento|
            |mileide@gmail.com|(18)88877777|33333333|Cep não encontrado                                                                                                     |
-             
+ 
+Corrigido:Atualizar Meus Dados
+      Dado usuário está na tela "Meus Dados"
+      Quando o usuário atualiza um dos valores nos seguintes campos
+             |campos          |valores            |valores atualizados|
+             |email           |testeeee@gmail.com |testewang@gmail.com|
+             |celular         |(88)88888777       |(12)121212121      |
+             |gênero          |masculino          |feminino           |
+             |cep             |18.685.670         |18.680.640         |
+             |estado          |Sp                 |Sp                 |
+             |cidade          |Lençóis Paulista   |Lençóis Paulista   |
+             |bairro          |Jardim das nações  |Jardim Cruzeiro    |
+             |Endereço        |rua Colômbia       |rua Pará           |
+             |número          |12                 |325                |
+             |complemento     |casa               |casa               |
+     E clica no botão "atualizar Meus Dados"
+     Então o sistema atualiza os " Meus Dados"
+     E exibe uma mensagem informando "dados atualizados com sucesso"
 
 Cenário:Atualizar meus dados com Campos não preenchidos
       Dados o usuário está na tela "meus dados"
