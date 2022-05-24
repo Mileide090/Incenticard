@@ -8,10 +8,16 @@ Cenário:Acessar Meus Cartões
       E clica no botão "entrar"
       Então é exibida a tela "meus cartões"
 
+Corrigido;Acessar meus cartões 
+     Dado o usuário preencheu os campos do "login"
+     Quando o usuário aciona o botão "Entrar"
+     Então o sistema faz o login na página
+     E exibe a tela " meus cartões"
+
 
 Cenário:Layout de meus cartões  (ponto a conversa com Rafa)
      Dado o usuário está na tela "meus cartões"
-     Quando o usuário visualiza oia "elementos" da tela 
+     Quando o usuário visualiza os "elementos" da tela 
      Então os elementos da tela estão alinhados corretamente 
 
 
@@ -21,6 +27,11 @@ Cenário:Ver cartões vencidos
        E clica no botão "ver cartões vencidos"
        Então é exibida a tela de "ver cartões vencidos"
 
+Corrigido:Meus cartões-ver cartões vencidos
+        Dado usuário está na tela "meus cartões"
+        Quando o usuário aciona o botão "ver cartões"
+        Então o sistema exibe os cartões marcados como "vencidos"
+
 
 Cenário:verificar estado dos cartões 
       Dado o usuário está na tela "meus cartões"
@@ -28,6 +39,17 @@ Cenário:verificar estado dos cartões
       Então o sistema exibe a legenda com as "<cores>" indicado cada estado do cartão 
 Exemplos:
         |Cartões                       |cores    |
+        |cartões  bloqueados           |Cinza    |
+        |cartões próximos do vencimento|amarelo  |
+        |cartões vencidos              |vermelho |
+
+Corrigido:Meus cartões-verificar estado dos cartões 
+      Dado o usuário está na tela "meus cartões"
+      Quando o usuário deseja visualizar o "<estado dos cartões>"
+      Então o sistema exibe a legenda com as "<cores>" indicado a situação que se encontra o cartão 
+Exemplos:
+        |Cartões                       |cores    |
+        |cartões ativos                |brnaco   |
         |cartões  bloqueados           |Cinza    |
         |cartões próximos do vencimento|amarelo  |
         |cartões vencidos              |vermelho |
