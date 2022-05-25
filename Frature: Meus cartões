@@ -15,7 +15,7 @@ Corrigido;Acessar meus cartões
      E exibe a tela " meus cartões"
 
 
-Cenário:Layout de meus cartões  (ponto a conversa com Rafa)
+Cenário:Layout de meus cartões  
      Dado o usuário está na tela "meus cartões"
      Quando o usuário visualiza os "elementos" da tela 
      Então os elementos da tela estão alinhados corretamente 
