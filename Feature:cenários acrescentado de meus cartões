@@ -1,0 +1,18 @@
+@language: pt
+
+Feature:Meus cartões 
+
+
+Cenário:Imprimir Dados do cartão virtual 
+    Dado o usuário estar na tela "cartões virtuais"
+    Quando o usuário clica encima do cartão "X"
+    E aciona o botão de "imprimir" 
+    Então é exibida a tela para "imprimir" 
+
+
+Cenário:Copiar Número do Cartão virtual
+     Dado o usuário estar na tela "cartões virtuais"
+     Quando o usuário clica encima do cartão "X"
+     E aciona o botão de "copiar"
+     Então o sistema cópia o "número do cartão" 
+     E o "print" é enviado para a área de transferência do celular
